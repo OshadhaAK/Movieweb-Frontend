@@ -1,5 +1,5 @@
-/home/oshadha/projects/Moviewebapp/src/main/java/com/movie/web/controller/Movie.java
-/home/oshadha/projects/Moviewebapp/src/main/java/com/movie/web/controller/Actor.java
+/home/oshadha/projects/Moviewebapp/src/main/java/com/movie/web/domain/Movie.java
+/home/oshadha/projects/Moviewebapp/src/main/java/com/movie/web/domain/Actor.java
 /home/oshadha/projects/Moviewebapp/src/main/java/com/movie/web/controller/AddActorController.java
 /home/oshadha/projects/Moviewebapp/src/main/java/com/movie/web/controller/AddMovieController.java
 /home/oshadha/projects/Moviewebapp/src/main/java/com/movie/web/controller/MovieDetailsController.java

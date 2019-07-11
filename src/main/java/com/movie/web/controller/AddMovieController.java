@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class AddMovieController {
 
-    @RequestMapping(value = "/add-movie", method = RequestMethod.GET)
+    @RequestMapping(value = "/movies/add-movie", method = RequestMethod.GET)
     public String printWelcome(ModelMap model) {
 
         model.addAttribute("message");
