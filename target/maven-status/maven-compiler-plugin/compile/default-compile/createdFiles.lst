@@ -1,0 +1,6 @@
+com/movie/web/controller/HomeController.class
+com/movie/web/controller/AddMovieController.class
+com/movie/web/controller/Actor.class
+com/movie/web/controller/MovieDetailsController.class
+com/movie/web/controller/AddActorController.class
+com/movie/web/controller/Movie.class
