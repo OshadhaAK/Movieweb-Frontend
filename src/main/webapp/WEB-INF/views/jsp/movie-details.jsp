@@ -45,8 +45,8 @@
                             </c:forEach>
                             </td>
                             <td>${message.description}</td>
-                            <td><button class="btn btn-primary" onclick="">Update</button></td>
-                            <td><button class="btn btn-danger" onclick="location.href='/movies/delete-movie?id=${message._id}'"">Delete</button></td>
+                            <td><button class="btn btn-primary" onclick="location.href='/movies/update-movie?id=${message._id}'">Update</button></td>
+                            <td><button class="btn btn-danger" onclick="location.href='/movies/delete-movie?id=${message._id}'">Delete</button></td>
                         </tr>
 
         </table>

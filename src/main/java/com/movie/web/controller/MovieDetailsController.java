@@ -1,5 +1,7 @@
 package com.movie.web.controller;
 
+import com.movie.web.domain.Actor;
+import com.movie.web.domain.Movie;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
@@ -26,6 +28,20 @@ public class MovieDetailsController {
         model.addAttribute("actors", actors);
 
         return "home";
+    }
+
+    @RequestMapping(value = "/movies/update-movie", method = RequestMethod.GET)
+    public String updateMovie(Model model, @RequestParam("id") String id) {
+
+        final String uri = "http://localhost:8081/movies/get/" + id;
+
+        Object movie = restTemplate.getForObject(uri,Object.class);
+
+        model.addAttribute("movie",movie);
+
+        model.addAttribute("message", new Movie());
+
+        return "update-movie";
     }
 
 }
