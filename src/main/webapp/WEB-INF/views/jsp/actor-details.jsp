@@ -35,8 +35,8 @@
                             <td>${message.name}</td>
                             <td>${message.dateofbirth}</td>
                             <td>${message.description}</td>
-                            <td><button class="btn btn-primary" onclick="">Update</button></td>
-                            <td><button class="btn btn-danger" onclick="location.href='/delete-actor?id=${message._id}'">Delete</button></td>
+                            <td><button class="btn btn-primary" onclick="location.href='/actors/update-actor?id=${message._id}'">Update</button></td>
+                            <td><button class="btn btn-danger" onclick="location.href='/actors/delete-actor?id=${message._id}'">Delete</button></td>
                         </tr>
 
         </table>
