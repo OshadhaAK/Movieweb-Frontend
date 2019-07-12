@@ -8,7 +8,7 @@
 <html lang="en">
 <head>
 <title>Maven + Spring MVC</title>
- 
+
 <spring:url value="/resources/core/css/hello.css" var="coreCss" />
 <spring:url value="/resources/core/css/bootstrap.min.css" var="bootstrapCss" />
 <link href="${bootstrapCss}" rel="stylesheet" />
@@ -16,7 +16,7 @@
 </head>
 
 <body>
- 
+
     <div class="container">
 
         <table class="table table-striped">
@@ -24,9 +24,7 @@
                         <tr>
 
                             <th>Name</th>
-                            <th>Year</th>
-                            <th>Genre</th>
-                            <th>Actors</th>
+                            <th>Date of Birth</th>
                             <th>Description</th>
 
                         </tr>
@@ -35,15 +33,7 @@
 
                         <tr>
                             <td>${message.name}</td>
-                            <td>${message.year}</td>
-                            <td>${message.genre}</td>
-                            <td>
-                            <c:forEach var="emp" items="${message.actors}">
-
-                            			<li>${emp}</li>
-
-                            </c:forEach>
-                            </td>
+                            <td>${message.dateofbirth}</td>
                             <td>${message.description}</td>
                             <td><button class="btn btn-primary" onclick="">Update</button></td>
                             <td><button class="btn btn-danger" onclick="">Delete</button></td>
@@ -61,15 +51,15 @@
 
 
     </div>
- 
 
- 
+
+
 <spring:url value="/resources/core/css/hello.js" var="coreJs" />
 <spring:url value="/resources/core/css/bootstrap.min.js" var="bootstrapJs" />
- 
+
 <script src="${coreJs}"></script>
 <script src="${bootstrapJs}"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
- 
+
 </body>
 </html>

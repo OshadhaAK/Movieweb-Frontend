@@ -11,6 +11,10 @@ public class Movie {
     public String description;
     public String link;
 
+
+    public Movie() {
+    }
+
     public Movie(String name, int year, String genre, ArrayList<String> actors, String description, String link) {
         this.name = name;
         this.year = year;

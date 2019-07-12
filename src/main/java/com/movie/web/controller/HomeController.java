@@ -15,7 +15,7 @@ public class HomeController {
     RestTemplate restTemplate = new RestTemplate();
 
     @RequestMapping(value = "/home", method = RequestMethod.GET)
-    public String showMovies(Model model) {
+    public String showAll(Model model) {
 
         Object movies = restTemplate.getForObject("http://localhost:8081/movies/get-all", Object.class);
         model.addAttribute("movies", movies);
@@ -27,7 +27,7 @@ public class HomeController {
 
     }
 
-    @RequestMapping(value = "movies/movie-details", method = RequestMethod.GET)
+    @RequestMapping(value = "/movies/movie-details", method = RequestMethod.GET)
     public String movieDetail(Model model, @RequestParam("id") String id) {
 
         final String uri = "http://localhost:8081/movies/get/" + id;
@@ -38,6 +38,19 @@ public class HomeController {
 
 
         return "movie-details";
+    }
+
+    @RequestMapping(value = "/actors/actor-details", method = RequestMethod.GET)
+    public String actorDetail(Model model, @RequestParam("id") String id) {
+
+        final String uri = "http://localhost:8081/actors/get/" + id;
+
+        Object actor = restTemplate.getForObject(uri,Object.class);
+
+        model.addAttribute("message",actor);
+
+
+        return "actor-details";
     }
 
 

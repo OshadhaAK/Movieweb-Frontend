@@ -21,7 +21,7 @@ public class AddActorController {
 
     }
 
-    @RequestMapping(value = "/add", method = RequestMethod.POST)
+    @RequestMapping(value = "/home/actor-added", method = RequestMethod.POST)
     public String formSubmit(@ModelAttribute("message") Actor actor, Model model) {
 
         final String uri = "http://localhost:8081/actors/add-actor";

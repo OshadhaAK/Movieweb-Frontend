@@ -58,7 +58,7 @@
                                    <div class="card-body">
                                        <h5 class="card-title">${actor.name}</h5>
 
-
+                                       <div class = "row"><button class="btn btn-success" onclick="location.href='/actors/actor-details?id=${actor._id}'">view</button></div>
 
                                        </br>
 
@@ -69,9 +69,10 @@
       </div>
 
 </div>
-<div class="btn-group" style" width: 100%; text-align: center;">
-            <button type="button" class="btn btn-primary" onclick="location.href='/movies/add-movie'">Add Movie</button>
-            <button type="button" class="btn btn-primary" onclick="location.href='/actors/add-actor'">Add Actor</button>
+<div class="btn-group btn-group-justified">
+  <a href="/movies/add-movie" class="btn btn-success">Add Movie</a>
+  <a href="/actors/add-actor" class="btn btn-success">Add Actor</a>
+
 </div>
 
 <!-- Bootstrap core JavaScript

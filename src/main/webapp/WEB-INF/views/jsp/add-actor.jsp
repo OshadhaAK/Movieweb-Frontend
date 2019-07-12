@@ -19,7 +19,7 @@
  
     <div class="container">
     <h2>Add Actor</h2>
-        <form:form method="post" modelAttribute="message" action="/add">
+        <form:form method="post" modelAttribute="message" action="/home/actor-added">
               <div class="form-group">
                 <label for="name">Name</label>
                 <form:input type="text" class="form-control" path="name" id="name"  placeholder="Enter Name" />
