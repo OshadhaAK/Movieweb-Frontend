@@ -11,7 +11,7 @@ import org.springframework.web.client.RestTemplate;
 @Controller
 public class MovieDetailsController {
 
-    /*RestTemplate restTemplate = new RestTemplate();
+    RestTemplate restTemplate = new RestTemplate();
 
     @RequestMapping(value = "/movies/delete-movie", method = RequestMethod.GET)
     public String deleteMovie(Model model, @RequestParam("id") String id) {
@@ -26,6 +26,6 @@ public class MovieDetailsController {
         model.addAttribute("actors", actors);
 
         return "home";
-    }*/
+    }
 
 }
