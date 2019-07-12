@@ -36,7 +36,7 @@
                             <td>${message.dateofbirth}</td>
                             <td>${message.description}</td>
                             <td><button class="btn btn-primary" onclick="">Update</button></td>
-                            <td><button class="btn btn-danger" onclick="">Delete</button></td>
+                            <td><button class="btn btn-danger" onclick="location.href='/delete-actor?id=${message._id}'">Delete</button></td>
                         </tr>
 
         </table>
