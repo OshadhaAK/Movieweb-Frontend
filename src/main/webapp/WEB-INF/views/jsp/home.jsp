@@ -35,12 +35,13 @@
         <c:forEach var="movie" items="${movies}" varStatus="loop">
                 <div class="col-md-4" >
                     <div class="card" style="width: 18rem;">
-                         <img class="card-img-top" src="https://ryanjayreviews.com/wp-content/uploads/2013/10/RJMC-4-Web-2.png" alt="" style=" width: 60%;height:50%">
+                         <img class="card-img-top" src="${movie.link}" alt="" style=" width: 60%;height:50%">
                                 <div class="card-body">
                                     <h5 class="card-title">${movie.name}</h5>
 
                                     <div class = "row">${movie.year}</div>
                                     <div class = "row">${movie.genre}</div>
+
                                     <div class = "row"><button class="btn btn-success" onclick="location.href='/movies/movie-details?id=${movie._id}'">view</button></div>
                                     </br>
 

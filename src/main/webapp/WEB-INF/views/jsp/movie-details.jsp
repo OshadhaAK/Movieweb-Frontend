@@ -22,18 +22,20 @@
         <table class="table table-striped">
                     <thead>
                         <tr>
-
+<th>Image</th>
                             <th>Name</th>
                             <th>Year</th>
                             <th>Genre</th>
                             <th>Actors</th>
                             <th>Description</th>
 
+
                         </tr>
                     </thead>
 
 
                         <tr>
+                            <td><img src="${message.link}" alt="" style=" width:20%;height:10%"></td>
                             <td>${message.name}</td>
                             <td>${message.year}</td>
                             <td>${message.genre}</td>
@@ -45,6 +47,7 @@
                             </c:forEach>
                             </td>
                             <td>${message.description}</td>
+
                             <td><button class="btn btn-primary" onclick="location.href='/movies/update-movie?id=${message._id}'">Update</button></td>
                             <td><button class="btn btn-danger" onclick="location.href='/movies/delete-movie?id=${message._id}'">Delete</button></td>
                         </tr>
