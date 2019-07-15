@@ -18,10 +18,11 @@ public class Actor {
     public Actor() {
     }
 
-    public Actor(String name, String dateofbirth, String description) {
+    public Actor(String name, String dateofbirth, String description, String link) {
         this.name = name;
         this.dateofbirth = dateofbirth;
         this.description = description;
+        this.link = link;
     }
 
     public String getName() {

@@ -22,7 +22,7 @@
         <table class="table table-striped">
                     <thead>
                         <tr>
-
+                            <th>Image</th>
                             <th>Name</th>
                             <th>Date of Birth</th>
                             <th>Description</th>
@@ -32,6 +32,7 @@
 
 
                         <tr>
+                            <td><img src="${message.link}" alt="" style=" width:20%;height:10%"></td>
                             <td>${message.name}</td>
                             <td>${message.dateofbirth}</td>
                             <td>${message.description}</td>

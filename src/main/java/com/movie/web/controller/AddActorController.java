@@ -30,7 +30,7 @@ public class AddActorController {
         obj.setName(actor.getName());
         obj.setDateofbirth(actor.getDateofbirth());
         obj.setDescription(actor.getDescription());
-
+        obj.setLink(actor.getLink());
         Object addedactor = restTemplate.postForObject( uri, obj, Object.class);
 
 

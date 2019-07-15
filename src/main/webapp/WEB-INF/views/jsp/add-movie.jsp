@@ -58,11 +58,11 @@
             </div>
 
             <div class="form-group">
-              <label for="link">Description</label>
+              <label for="link">Image Link</label>
               <form:input type="text" class="form-control" path="link" id="link" placeholder="Image link" />
             </div>
 
-              <form:button type="submit" class="btn btn-primary">add</form:button>
+             <form:button type="submit" class="btn btn-primary">add</form:button>
         </form:form>
     </div>
 

@@ -36,6 +36,10 @@
 
 
                     </div>
+                    <div class="form-group">
+                                  <label for="link">Image Link</label>
+                                  <form:input type="text" class="form-control" path="link" id="link" placeholder="Image link" />
+                                </div>
                       <button type="submit" class="btn btn-primary"  >update</button>
                 </form:form>
     </div>

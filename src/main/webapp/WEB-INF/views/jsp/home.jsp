@@ -55,7 +55,7 @@
             <c:forEach var="actor" items="${actors}" varStatus="loop">
                    <div class="col-md-4" >
                        <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" src="https://amp.businessinsider.com/images/5b7d8ded64dce8bc068b4c03-750-563.jpg" alt="" style=" width: 80%;height:50%">
+                            <img class="card-img-top" src="${actor.link}" alt="" style=" width: 80%;height:50%">
                                    <div class="card-body">
                                        <h5 class="card-title">${actor.name}</h5>
 

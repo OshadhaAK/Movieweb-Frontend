@@ -54,6 +54,7 @@ public class ActorDetailsController {
         obj.setName(actor.getName());
         obj.setDateofbirth(actor.getDateofbirth());
         obj.setDescription(actor.getDescription());
+        obj.setLink(actor.getLink());
 
         restTemplate.put(uri,obj);
 

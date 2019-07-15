@@ -31,11 +31,15 @@
 
             </div>
             <div class="form-group">
-              <label for="description">Name</label>
-              <form:input type="text" class="form-control" path="description" id="description" placeholder="Description" rows="3" />
-
-
+              <label for="description">Description</label>
+              <form:input type="text" class="form-control" path="description" id="description" placeholder="Description" />
+             </div>
+            <div class="form-group">
+              <label for="link">Image Link</label>
+              <form:input type="text" class="form-control" path="link" id="link" placeholder="Image link" />
             </div>
+
+
               <button type="submit" class="btn btn-primary">add</button>
         </form:form>
     </div>
