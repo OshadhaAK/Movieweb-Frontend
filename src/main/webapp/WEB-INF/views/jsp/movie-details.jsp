@@ -40,7 +40,7 @@
                             <td>
                             <c:forEach var="emp" items="${message.actors}">
 
-                            			<li>${emp}</li>
+                            			<li>${emp.name}</li>
 
                             </c:forEach>
                             </td>

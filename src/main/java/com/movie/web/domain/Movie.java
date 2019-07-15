@@ -8,7 +8,7 @@ public class Movie {
     public String name;
     public int year;
     public String genre;
-    public List<String> actors;
+    public List<String> actorIds;
     public String description;
     public String link;
 
@@ -16,11 +16,11 @@ public class Movie {
     public Movie() {
     }
 
-    public Movie(String name, int year, String genre, List<String> actors, String description, String link) {
+    public Movie(String name, int year, String genre, List<String> actorIds, String description, String link) {
         this.name = name;
         this.year = year;
         this.genre = genre;
-        this.actors = actors;
+        this.actorIds = actorIds;
         this.description = description;
         this.link = link;
     }
@@ -50,11 +50,11 @@ public class Movie {
     }
 
     public List<String> getActors() {
-        return actors;
+        return actorIds;
     }
 
     public void setActors(List<String> actors) {
-        this.actors = actors;
+        this.actorIds = actors;
     }
 
     public String getDescription() {
