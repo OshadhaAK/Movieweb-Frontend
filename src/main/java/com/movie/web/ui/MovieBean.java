@@ -1,22 +1,21 @@
-package com.movie.web.domain;
+package com.movie.web.ui;
 
 import java.util.ArrayList;
-import java.util.List;
 
-public class Movie {
+public class MovieBean {
 
     public String name;
     public int year;
     public String genre;
-    public List<String> actors;
+    public String actors;
     public String description;
     public String link;
 
 
-    public Movie() {
+    public MovieBean() {
     }
 
-    public Movie(String name, int year, String genre, List<String> actors, String description, String link) {
+    public MovieBean(String name, int year, String genre, String actors, String description, String link) {
         this.name = name;
         this.year = year;
         this.genre = genre;
@@ -49,11 +48,11 @@ public class Movie {
         this.genre = genre;
     }
 
-    public List<String> getActors() {
+    public String getActors() {
         return actors;
     }
 
-    public void setActors(List<String> actors) {
+    public void setActors(String actors) {
         this.actors = actors;
     }
 

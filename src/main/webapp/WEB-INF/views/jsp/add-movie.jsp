@@ -19,7 +19,7 @@
 
     <div class="container">
     <h2>Add Movie</h2>
-        <form:form method="post" modelAttribute="message" action="/home/movie-added">
+        <form:form method="post" modelAttribute="message" action="/movies/submit-movie">
               <div class="form-group">
                 <label for="name">Name of the Movie</label>
                 <form:input type="text" class="form-control" path="name" id="name"  placeholder="Enter Name" />
@@ -27,7 +27,7 @@
               </div>
             <div class="form-group">
                 <label for="year">Released Year</label>
-                <form:input type="date" class="form-control" path="year" id="year"  placeholder="Released Year" />
+                <form:input type="integer" class="form-control" path="year" id="year"  placeholder="Released Year" />
 
             </div>
             <div class="form-group">
@@ -36,9 +36,10 @@
 
              </div>
             <div class="form-group">
+
                 <label for="actor">Actors</label>
 
-                <form:select path="actors" id="lstActors" multiple="multiple">
+                <form:select path="actors" id="lstActors"  multiple="multiple">
 
                         <c:forEach items="${actors}" var="actor">
                             <option value="${actor.name}">
@@ -54,15 +55,13 @@
             <div class="form-group">
               <label for="description">Description</label>
               <form:input type="text" class="form-control" path="description" id="description" placeholder="Description" />
-
-
             </div>
+
             <div class="form-group">
               <label for="link">Description</label>
               <form:input type="text" class="form-control" path="link" id="link" placeholder="Image link" />
-
-
             </div>
+
               <form:button type="submit" class="btn btn-primary">add</form:button>
         </form:form>
     </div>
@@ -88,7 +87,9 @@
   $(function () {
       $('#lstActors').multiselect({
           includeSelectAllOption: true
+
       });
+
   });
   </script>
 </body>

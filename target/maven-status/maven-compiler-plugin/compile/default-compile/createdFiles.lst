@@ -5,3 +5,4 @@ com/movie/web/domain/Actor.class
 com/movie/web/controller/MovieDetailsController.class
 com/movie/web/controller/AddActorController.class
 com/movie/web/controller/ActorDetailsController.class
+com/movie/web/ui/MovieBean.class
