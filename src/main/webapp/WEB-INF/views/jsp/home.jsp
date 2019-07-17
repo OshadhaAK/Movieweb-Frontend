@@ -34,15 +34,19 @@
 
         <c:forEach var="movie" items="${movies}" varStatus="loop">
                 <div class="col-md-4" >
-                    <div class="card" style="width: 18rem;">
-                         <img class="card-img-top" src="${movie.link}" alt="" style=" width: 60%;height:50%">
+                    <div class="card" style="width: 18rem;height: 25rem;">
+                    <input type="image" src="${movie.link}" name="saveForm" class="btTxt submit card-img-top" id="saveForm" style=" width: 60%;height:50%" onclick="location.href='/movies/movie-details?id=${movie._id}'"/>
+
                                 <div class="card-body">
                                     <h5 class="card-title">${movie.name}</h5>
 
-                                    <div class = "row">${movie.year}</div>
-                                    <div class = "row">${movie.genre}</div>
+                                    <div class = "row">Released Year: ${movie.year}</div>
+                                    <div class = "row">Genre: ${movie.genre}</div>
 
-                                    <div class = "row"><button class="btn btn-success" onclick="location.href='/movies/movie-details?id=${movie._id}'">view</button></div>
+                                    <div class = "row">
+
+
+                                    </div>
                                     </br>
 
                                  </div>
@@ -54,12 +58,12 @@
             <h3>Actors</h3>
             <c:forEach var="actor" items="${actors}" varStatus="loop">
                    <div class="col-md-4" >
-                       <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" src="${actor.link}" alt="" style=" width: 80%;height:50%">
+                       <div class="card" style="width: 18rem;height: 25rem;">
+                            <input type="image" src="${actor.link}" name="saveForm" class="btTxt submit card-img-top" id="saveForm" style=" width: 60%;height:50%" onclick="location.href='/actors/actor-details?id=${actor._id}'"/>
                                    <div class="card-body">
                                        <h5 class="card-title">${actor.name}</h5>
 
-                                       <div class = "row"><button class="btn btn-success" onclick="location.href='/actors/actor-details?id=${actor._id}'">view</button></div>
+
 
                                        </br>
 

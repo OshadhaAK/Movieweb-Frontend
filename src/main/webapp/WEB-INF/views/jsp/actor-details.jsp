@@ -32,7 +32,7 @@
 
 
                         <tr>
-                            <td><img src="${message.link}" alt="" style=" width:20%;height:10%"></td>
+                            <td><img src="${message.link}" alt="" style=" width:20rem;height:30rem"></td>
                             <td>${message.name}</td>
                             <td>${message.dateofbirth}</td>
                             <td>${message.description}</td>
