@@ -71,6 +71,7 @@
   </head>
   <body>
         <div class="sidenav">
+            <img class="d-block w-100" src="https://png.pngtree.com/element_pic/16/11/25/338b05c261d71d7d21fad2d393bebeca.jpg">
           <a href="/movies/add-movie">Add Movie</a>
           <a href="/actors/add-actor">Add Actor</a>
         </div>
