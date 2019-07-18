@@ -41,8 +41,13 @@
 
                         <form:select path="actors" id="lstActors"  multiple="multiple">
 
+                                <c:forEach items="${movie.actors}" var="actor">
+                                    <option value="${actor._id}" selected>
+                                        ${actor.name}
+                                    </option>
+                                </c:forEach>
                                 <c:forEach items="${actors}" var="actor">
-                                    <option value="${actor._id}">
+                                    <option value="${actor._id}" >
                                         ${actor.name}
                                     </option>
                                 </c:forEach>
