@@ -57,8 +57,8 @@
       .sidenav a {font-size: 18px;}
     }
     .zoom {
-      padding: 50px;
-      background-color: #e6ccff;
+      padding: 20px;
+      background-color: RoyalBlue;
       transition: transform .2s; /* Animation */
 
 
@@ -75,8 +75,28 @@
           <a href="/actors/add-actor">Add Actor</a>
         </div>
 
-        <div class="main">
-
+        <div class="main" style="background-color:#111;">
+            <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel" >
+              <div class="carousel-inner">
+                <div class="carousel-item active" style="height:30rem">
+                  <img class="d-block w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7C5sUX0OQhouVF1xZXM5hrCZdpfmLtU9j8BTu2KPkRQ_gpQZaIQ" alt="First slide">
+                </div>
+                <div class="carousel-item" style="height:30rem">
+                  <img class="d-block w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQccWR8T1uG4T-6fyn_054jp_Vj-0oD9ZrnlGWRjPeP8AEo0DqjgQ" alt="Second slide">
+                </div>
+                <div class="carousel-item" style="height:30rem">
+                  <img class="d-block w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKVGCsOd1ZLWkWJEbcvd9kT2jUx2LwXtI9FFzsKyD0A1ACMUSK" alt="Third slide">
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
           <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item">
               <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Movies</a>
@@ -87,9 +107,9 @@
 
           </ul>
 
-          <div class="tab-content" id="myTabContent">
+          <div class="tab-content" id="myTabContent" style="background-color:#111;">
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                    <h3>Movies</h3>
+
                     <div class="row">
                         <c:forEach var="movie" items="${movies}" varStatus="loop">
                                 <div class="col-md-4" >
@@ -114,7 +134,7 @@
 
             </div>
             <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                <h3>Actors</h3>
+
                 <div class="row">
 
                     <c:forEach var="actor" items="${actors}" varStatus="loop">
