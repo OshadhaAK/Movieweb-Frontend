@@ -4,96 +4,152 @@
 
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<title>Maven + Spring MVC</title>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<spring:url value="/resources/core/css/home.css" var="coreCss" />
-<spring:url value="/resources/core/css/bootstrap.min.css" var="bootstrapCss" />
-<link href="${bootstrapCss}" rel="stylesheet" />
-<link href="${coreCss}" rel="stylesheet" />
-</head>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-<body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <title>Hello, world!</title>
+    <style>
+    body {
+      font-family: "Lato", sans-serif;
+    }
 
-<div class="container"></div>
-    <div id="exTab3" class="container">
-        <ul  class="nav nav-pills">
-                <li class="active">
-                    <a  href="#1b" data-toggle="tab">Movies</a>
-                </li>
-                <li><a href="#2b" data-toggle="tab">Actors</a>
-                </li>
+    .sidenav {
+      height: 100%;
+      width: 160px;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      padding-top: 20px;
+    }
 
-         </ul>
+    .sidenav a {
+      padding: 6px 8px 6px 16px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+    }
 
-    <div class="tab-content clearfix">
-      <div class="tab-pane active" id="1b">
-        <h3>Movies</h3>
+    .sidenav a:hover {
+      color: #f1f1f1;
+    }
 
-        <c:forEach var="movie" items="${movies}" varStatus="loop">
-                <div class="col-md-4" >
-                    <div class="card" style="width: 18rem;height: 25rem;">
-                    <input type="image" src="${movie.link}" name="saveForm" class="btTxt submit card-img-top" id="saveForm" style=" width: 60%;height:50%;" onclick="location.href='/movies/movie-details?id=${movie._id}'"/>
+    .main {
+      margin-left: 160px; /* Same as the width of the sidenav */
+      font-size: 28px; /* Increased text to enable scrolling */
+      padding: 0px 10px;
+    }
 
-                                <div class="card-body">
-                                    <h5 class="card-title" style="font-weight: bold;color:black;text-color:black;font-size:160%;">${movie.name}</h5>
-
-                                    <div class = "row">Released Year: ${movie.year}</div>
-                                    <div class = "row">Genre: ${movie.genre}</div>
-
-                                    <div class = "row">
-
-
-                                    </div>
-                                    </br>
-
-                                 </div>
-                          </div>
-                     </div>
-        </c:forEach>
-      </div>
-      <div class="tab-pane" id="2b">
-            <h3>Actors</h3>
-            <c:forEach var="actor" items="${actors}" varStatus="loop">
-                   <div class="col-md-4" >
-                       <div class="card" style="width: 18rem;height: 25rem;">
-                            <input type="image" src="${actor.link}" name="saveForm" class="btTxt submit card-img-top" id="saveForm" style=" width: 60%;height:50%;" onclick="location.href='/actors/actor-details?id=${actor._id}'"/>
-                                   <div class="card-body">
-                                       <h5 class="card-title" style="font-weight: bold;color:black;text-color:black;font-size:160%;">${actor.name}</h5>
+    @media screen and (max-height: 450px) {
+      .sidenav {padding-top: 15px;}
+      .sidenav a {font-size: 18px;}
+    }
+    .zoom {
+      padding: 50px;
+      background-color: #e6ccff;
+      transition: transform .2s; /* Animation */
 
 
+    }
 
-                                       </br>
+    .zoom:hover {
+      transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    }
+    </style>
+  </head>
+  <body>
+        <div class="sidenav">
+          <a href="/movies/add-movie">Add Movie</a>
+          <a href="/actors/add-actor">Add Actor</a>
+        </div>
 
-                                    </div>
-                             </div>
-                        </div>
-             </c:forEach>
-      </div>
+        <div class="main">
 
-</div>
-<div class="btn-group btn-group-justified">
-  <a href="/movies/add-movie" class="btn btn-success">Add Movie</a>
-  <a href="/actors/add-actor" class="btn btn-success">Add Actor</a>
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Movies</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Actors</a>
+            </li>
 
-</div>
+          </ul>
 
-<!-- Bootstrap core JavaScript
-    ================================================== -->
-	<!-- Placed at the end of the document so the pages load faster -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <h3>Movies</h3>
+                    <div class="row">
+                        <c:forEach var="movie" items="${movies}" varStatus="loop">
+                                <div class="col-md-4" >
+                                    <div class="card zoom" style="width: 18rem;height: 28rem; margin:20px" alt="Card image cap" onclick="location.href='/movies/movie-details?id=${movie._id}'">
+                                    <input type="image" src="${movie.link}" style="height: 40%;" name="saveForm" class="btTxt submit card-img-top" id="saveForm"  />
+
+                                                <div class="card-body">
+                                                    <h5 class="card-title" style="font-weight: bold;color:black;text-color:black;font-size:160%;">${movie.name}</h5>
+
+                                                    <div class = "row">Released Year: ${movie.year}</div>
+                                                    <div class = "row">Genre: ${movie.genre}</div>
+
+
+                                                    </br>
+
+                                                 </div>
+                                          </div>
+                                     </div>
+                        </c:forEach>
+
+                    </div>
+
+            </div>
+            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                <h3>Actors</h3>
+                <div class="row">
+
+                    <c:forEach var="actor" items="${actors}" varStatus="loop">
+                           <div class="col-md-4" >
+                               <div class="card zoom" style="width: 18rem;height: 25rem;margin:20px">
+                                    <input type="image" src="${actor.link}" style="height: 80%;" name="saveForm" class="btTxt submit card-img-top" id="saveForm" style=" width: 60%;height:50%;" onclick="location.href='/actors/actor-details?id=${actor._id}'"/>
+                                           <div class="card-body">
+                                               <h5 class="card-title" style="font-weight: bold;color:black;text-color:black;font-size:160%;">${actor.name}</h5>
 
 
 
-<spring:url value="/resources/core/css/home.js" var="coreJs" />
-<spring:url value="/resources/core/css/bootstrap.min.js" var="bootstrapJs" />
+                                               </br>
 
-<script src="${coreJs}"></script>
-<script src="${bootstrapJs}"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+                                            </div>
+                                     </div>
+                                </div>
+                     </c:forEach>
 
-</body>
+                </div>
+            </div>
+
+
+          </div>
+
+        </div>
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
 </html>
