@@ -58,7 +58,7 @@
     }
     .zoom {
       padding: 20px;
-      background-color: RoyalBlue;
+      background-color: #d9b3ff;
       transition: transform .2s; /* Animation */
 
 
