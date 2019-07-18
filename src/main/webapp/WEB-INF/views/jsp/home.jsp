@@ -93,13 +93,13 @@
                     <div class="row">
                         <c:forEach var="movie" items="${movies}" varStatus="loop">
                                 <div class="col-md-4" >
-                                    <div class="card zoom" style="width: 18rem;height: 28rem; margin:20px" alt="Card image cap" onclick="location.href='/movies/movie-details?id=${movie._id}'">
-                                    <input type="image" src="${movie.link}" style="height: 40%;" name="saveForm" class="btTxt submit card-img-top" id="saveForm"  />
+                                    <div class="card zoom" style="width: 20rem;height: 27rem; margin:20px" alt="Card image cap" onclick="location.href='/movies/movie-details?id=${movie._id}'">
+                                    <input type="image" src="${movie.link}" style="height: 50%;" name="saveForm" class="btTxt submit card-img-top" id="saveForm"  />
 
                                                 <div class="card-body">
-                                                    <h5 class="card-title" style="font-weight: bold;color:black;text-color:black;font-size:160%;">${movie.name}</h5>
+                                                    <h5 class="card-title" style="font-weight: bold;color:black;text-color:black;font-size:120%;">${movie.name}</h5>
 
-                                                    <div class = "row">Released Year: ${movie.year}</div>
+                                                    <div class = "row">Year: ${movie.year}</div>
                                                     <div class = "row">Genre: ${movie.genre}</div>
 
 
