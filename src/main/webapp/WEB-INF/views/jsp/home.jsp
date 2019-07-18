@@ -16,7 +16,7 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    <title>Hello, world!</title>
+    <title>Movie WebApp</title>
     <style>
     body {
       font-family: "Lato", sans-serif;
@@ -80,13 +80,13 @@
             <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel" >
               <div class="carousel-inner">
                 <div class="carousel-item active" style="height:30rem">
-                  <img class="d-block w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7C5sUX0OQhouVF1xZXM5hrCZdpfmLtU9j8BTu2KPkRQ_gpQZaIQ" alt="First slide">
+                  <img class="d-block w-100" src="https://images4.alphacoders.com/653/653613.jpg" alt="First slide">
                 </div>
                 <div class="carousel-item" style="height:30rem">
-                  <img class="d-block w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQccWR8T1uG4T-6fyn_054jp_Vj-0oD9ZrnlGWRjPeP8AEo0DqjgQ" alt="Second slide">
+                  <img class="d-block w-100" src="http://www.sclance.com/wallpapers/movie-hd-wallpapers/movie-hd-wallpapers_1358164.jpg" alt="Second slide">
                 </div>
                 <div class="carousel-item" style="height:30rem">
-                  <img class="d-block w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKVGCsOd1ZLWkWJEbcvd9kT2jUx2LwXtI9FFzsKyD0A1ACMUSK" alt="Third slide">
+                  <img class="d-block w-100" src="https://www.stereo.net.au/images/articles/Images/Aquaman_4K-Bluray-Review.jpg" alt="Third slide">
                 </div>
               </div>
               <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
