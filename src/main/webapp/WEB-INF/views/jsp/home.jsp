@@ -57,8 +57,8 @@
       .sidenav a {font-size: 18px;}
     }
     .zoom {
-      padding: 20px;
-      background-color: #d9b3ff;
+
+      background-color: #fff;
       transition: transform .2s; /* Animation */
 
 
@@ -114,21 +114,16 @@
                     <div class="row">
                         <c:forEach var="movie" items="${movies}" varStatus="loop">
                                 <div class="col-md-4" >
-                                    <div class="card zoom" style="width: 20rem;height: 27rem; margin:20px" alt="Card image cap" onclick="location.href='/movies/movie-details?id=${movie._id}'">
-                                    <input type="image" src="${movie.link}" style="height: 50%;" name="saveForm" class="btTxt submit card-img-top" id="saveForm"  />
+                                    <div class="card img-fluid zoom " style="width: 20rem; height: 27rem; margin:20px" alt="Card image cap" onclick="location.href='/movies/movie-details?id=${movie._id}'">
 
-                                                <div class="card-body">
-                                                    <h5 class="card-title" style="font-weight: bold;color:black;text-color:black;font-size:120%;">${movie.name}</h5>
-
-                                                    <div class = "row">Year: ${movie.year}</div>
-                                                    <div class = "row">Genre: ${movie.genre}</div>
+                                            <img class="card-img-top" src="${movie.link}" alt="Card image" style="width:100%;height:100%">
 
 
-                                                    </br>
 
-                                                 </div>
-                                          </div>
+
+
                                      </div>
+                                </div>
                         </c:forEach>
 
                     </div>
@@ -140,16 +135,9 @@
 
                     <c:forEach var="actor" items="${actors}" varStatus="loop">
                            <div class="col-md-4" >
-                               <div class="card zoom" style="width: 18rem;height: 25rem;margin:20px">
-                                    <input type="image" src="${actor.link}" style="height: 80%;" name="saveForm" class="btTxt submit card-img-top" id="saveForm" style=" width: 60%;height:50%;" onclick="location.href='/actors/actor-details?id=${actor._id}'"/>
-                                           <div class="card-body">
-                                               <h5 class="card-title" style="font-weight: bold;color:black;text-color:black;font-size:160%;">${actor.name}</h5>
+                               <div class="card img-fluid zoom " style="width:12rem; height: 15rem; margin:20px" alt="Card image cap" onclick="location.href='/actors/actor-details?id=${actor._id}'">
+                                    <img class="card-img-top" src="${actor.link}" alt="Card image" style="width:100%;height:100%">
 
-
-
-                                               </br>
-
-                                            </div>
                                      </div>
                                 </div>
                      </c:forEach>
